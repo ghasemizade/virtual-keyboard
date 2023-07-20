@@ -14,6 +14,10 @@ document.addEventListener('keyup', function (event) {
 
 
 function showkeyUp(event) {
-    console.log(event)
+    if (event.key === 'Backspace') {
+        getTitle.innerHTML = getTitle.innerHTML.slice(0, -1)
+        return
+    }
+
     getTitle.innerHTML += event.key
 }
